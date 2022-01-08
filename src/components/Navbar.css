@@ -1,0 +1,12 @@
+.navbar {
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    height: 40px;
+    width: 100%;
+    top: 0;
+}

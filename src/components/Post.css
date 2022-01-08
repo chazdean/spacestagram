@@ -1,0 +1,27 @@
+.post {
+    width: 400px;
+    border: 2px solid #000000;
+    padding: 20px 20px 10px 20px;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.post:hover {
+    box-shadow: 5px 5px 1px 1px rgba(116, 116, 254, 0.2); 
+}
+
+.post__image {
+    width: 100%
+}
+
+.post__footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fa-heart__selected {
+    color: rgb(185, 24, 24);
+}
