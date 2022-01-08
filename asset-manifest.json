@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/spacestagram/static/css/main.36a1e6eb.css",
+    "main.js": "/spacestagram/static/js/main.2b1b0893.js",
+    "index.html": "/spacestagram/index.html",
+    "main.36a1e6eb.css.map": "/spacestagram/static/css/main.36a1e6eb.css.map",
+    "main.2b1b0893.js.map": "/spacestagram/static/js/main.2b1b0893.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.36a1e6eb.css",
+    "static/js/main.2b1b0893.js"
+  ]
+}
