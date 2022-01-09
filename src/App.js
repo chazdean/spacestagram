@@ -1,9 +1,7 @@
 import React from 'react';
-import Navbar from './components/Navbar';
 import Post from './components/Post';
-import Loading from './components/Loading';
+import { Page, Frame, Loading } from '@shopify/polaris';
 import useApplicationData from './hooks/useApplicationData';
-import './App.css';
 
 function App() {
   const { photos, loading } = useApplicationData();
@@ -22,16 +20,20 @@ function App() {
   }) 
 
   return (
-    <main className="layout">
-        {console.log(posts)}
-        <Navbar />
-            <section className="layout__feed">
-                { loading ? 
-                <Loading 
-                loading={loading}
-                /> : posts}
-            </section>
-    </main>
+     loading ? 
+        <div style={{height: '100px'}}>
+            <Frame>
+                <Loading />
+            </Frame>
+        </div>
+        : 
+        <Page
+            narrowWidth
+            title="Spacestagram"
+            subtitle="Brought to you by NASA's Mars Rover image API"
+            >
+            {posts}
+        </Page>   
   );
 }
 
