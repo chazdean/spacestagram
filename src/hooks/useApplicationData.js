@@ -13,7 +13,10 @@ export default function useApplicationData() {
         .then((response) => {
             console.log(response.data)
             setPhotos(response.data.photos)
-            setLoading(false)
+            // Added timeout to showcase loading animation
+            setTimeout(() => {
+                setLoading(false)
+              }, 500);
         })
         .catch((error) => {
         console.log(error)

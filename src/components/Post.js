@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import "./Post.css";
+import { MediaCard, Icon, Stack, TextStyle } from '@shopify/polaris';
+import { HeartMajor } from '@shopify/polaris-icons';
 
 export default function Post(props) {
 
@@ -17,13 +18,28 @@ export default function Post(props) {
     }
 
     return (
-        <section className="post">
-            <img className="post__image" src={props.img} alt=""></img>
-            <h1 className="post__text">{props.roverName} - {props.cameraName}</h1>
-            <div className="post__footer">
-                <p>{props.date}</p>
-                <i className={`fas fa-heart ${liked ? 'fa-heart__selected':''}`} onClick={toggleLike}></i>
-            </div>
-        </section>
+        <MediaCard
+            title={`${props.roverName} - ${props.cameraName}`}
+            primaryAction={{
+                content: liked ? "Unlike" : "Like",
+                onAction: () => {toggleLike()},
+            }}
+            description={
+            <Stack vertical={true} alignment='leading'>
+                <TextStyle>{props.date}</TextStyle>
+                {liked ? <Icon source={HeartMajor} color="critical" /> : ""}
+            </Stack>}
+        >
+        <img
+            alt=""
+            width="100%"
+            height="100%"
+            style={{
+            objectFit: 'cover',
+            objectPosition: 'center',
+            }}
+            src={props.img}
+        />
+        </MediaCard>
     )
 } 
