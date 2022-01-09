@@ -23,14 +23,14 @@ function App() {
 
   return (
     <main className="layout">
-      {console.log(posts)}
-      <Navbar />
-      <section className="layout__feed">
-        { loading ? 
-        <Loading 
-          loading={loading}
-        /> : posts}
-      </section>
+        {console.log(posts)}
+        <Navbar />
+            <section className="layout__feed">
+                { loading ? 
+                <Loading 
+                loading={loading}
+                /> : posts}
+            </section>
     </main>
   );
 }

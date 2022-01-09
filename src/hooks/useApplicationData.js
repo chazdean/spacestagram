@@ -18,7 +18,7 @@ export default function useApplicationData() {
         .catch((error) => {
         console.log(error)
         })
-    }, []);
+    }, [API_KEY]);
 
     return { photos, loading }
 }

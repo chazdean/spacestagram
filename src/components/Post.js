@@ -10,7 +10,7 @@ export default function Post(props) {
 
     useEffect(() => {
         localStorage.setItem(props.id, JSON.stringify(liked))
-    }, [liked])
+    }, [liked, props.id])
  
     function toggleLike() {
         liked ? setLike(false) : setLike(true)

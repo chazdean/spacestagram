@@ -7,6 +7,12 @@
     flex-direction: column;
 }
 
+@media screen and (max-width: 450px) {
+    .post {
+        width: 300px;
+    }
+  }
+
 .post:hover {
     box-shadow: 5px 5px 1px 1px rgba(116, 116, 254, 0.2); 
 }
