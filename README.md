@@ -5,5 +5,5 @@ Spacestagram is a React app that shares photos from one of NASA’s image APIs. 
 ## Features
 
 * Likes are saved even if the user refreshes the page
-* Clicking the Like buttion animates a red heart icon
+* Clicking the Like button animates a red heart icon
 * Page presents a loading bar while fetching images from NASA's API
