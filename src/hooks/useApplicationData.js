@@ -11,12 +11,8 @@ export default function useApplicationData() {
         setLoading(true)
         axios.get(`https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?earth_date=2015-10-3&api_key=${API_KEY}`)
         .then((response) => {
-            console.log(response.data)
             setPhotos(response.data.photos)
-            // Added timeout to showcase loading animation
-            setTimeout(() => {
-                setLoading(false)
-              }, 500);
+            setLoading(false)
         })
         .catch((error) => {
         console.log(error)
